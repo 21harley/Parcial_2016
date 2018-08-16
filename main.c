@@ -29,9 +29,9 @@ int main(int argc, char *argv[]) {
    Por ejemplo, para el caso del numero 1 su “distancia de la felicidad” es 0 ya que 1^2 = 1.   
    No asi para el 23 cuya “distancia de la felicidad” es 3, como se muestra a continuacion: 
    Numero      Proceso    Suma     Iteracion 
-    23         22 + 32     13       1
-    13         12 + 32     10       2
-    10         12 + 02      1       3   
+    23         2^2 + 32     13       1
+    13         1^2 + 32     10       2
+    10         1^2 + 02      1       3   
    Distancia de la felicidad  
    Un numero se dice que es “no feliz” cuando está infinitamente lejos de llegar a la felicidad, es decir, se queda atrapado en un ciclo y su suma nunca llega a 1.
    Se puede demostrar que todo numero “no feliz” se queda atrapado en el ciclo 4, 16, 37, 58, 89, 145, 42, 20, 4, 16, 37… y asi para siempre sin llegar al 1.
@@ -48,8 +48,16 @@ int main(int argc, char *argv[]) {
    ------------------------------------------------------------------------------------------------------
 	
 	*/
-	//resp1
-	int i=0,numero=0,ban=0;
+	do{
+	int i=0,numero=0,ban=0,total=0,cot=0,aux=0,aux1=10,res=0;
+	printf("¿");
+	   printf("");
+	   printf("");
+	   printf("");
+	   printf("");
+	   printf("");
+	 if(){
+	//resp1---------------------------------------------------------------------------------------------------------------
 	printf("Hola ingrese numero positivo menor o igual 10^4 \n");
 	do{
 		scanf("%i",&numero);
@@ -60,9 +68,12 @@ int main(int argc, char *argv[]) {
 			ban=0;
 		}
 	}while(ban!=0);
-	//-------------------------------------------------------------------------------------------------------------------
-	//resp2 
-	int total=0,cot=0;
+	//-----------------------------------------------------------------------------------------------------------------------
+	 }
+	 if(){
+		if(){
+			if(){
+	//resp2-------------------------------------------------------------------------------------------------------------------
 	for(i=0;i<numero+1;i++){
 		if(cot%2==0){
 			total=total+pow((numero-cot),2);cot++;
@@ -71,9 +82,10 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	printf("Resltado del valor p es %i \n",total);cot=2;
-	//----------------------------------------------------------------------------------------------------------------------
-	//resp3
-    int aux=0,aux1=10;
+	//------------------------------------------------------------------------------------------------------------------------	
+			}
+			if(){
+	//resp3------------------------------------------------------------------------------------------------------------------
     aux=numero%10;
 	aux1=numero%1000;aux1/=100;  
 	aux+=aux1*10;
@@ -82,8 +94,21 @@ int main(int argc, char *argv[]) {
 	}else{
 		printf("si es un numero invicto %i \n",aux);
 	}
-	//------------------------------------------------------------------------------------------------------------------------
-	//resp4
-	
+	//------------------------------------------------------------------------------------------------------------------------	
+			}
+			if(){
+	//resp4-------------------------------------------------------------------------------------------------------------------
+	do{
+		do{
+			
+		}while();
+	}while();
+	//------------------------------------------------------------------------------------------------------------------------		
+			}
+		}
+	 }	
+	}while(res!=5);
+
+
 	return 0;
 }
