@@ -48,15 +48,16 @@ int main(int argc, char *argv[]) {
    ------------------------------------------------------------------------------------------------------
 	
 	*/
+	int i=0,numero=0,ban=0,total=0,cot=0,aux=0,aux1=10,ban1=0,num=0,inter=0,res=0;
 	do{
-	int i=0,numero=0,ban=0,total=0,cot=0,aux=0,aux1=10,res=0;
-	printf("¿");
-	   printf("");
-	   printf("");
-	   printf("");
-	   printf("");
-	   printf("");
-	 if(){
+	printf("¿En que le podemos ayudar? \n");
+	   printf("1)Ingrese  P  menor o igual que 10^4. \n");
+	   printf("2)valor de P (P-n-1)^2 + (P-n)^2 \n");
+	   printf("3)Determinar si el numero P es un numero invicto. \n");
+	   printf("4)¿El numero es Feliz? \n");
+	   printf("5)salir \n");
+	   scanf("%i",&res);
+	 if(res==1&&res!=0){
 	//resp1---------------------------------------------------------------------------------------------------------------
 	printf("Hola ingrese numero positivo menor o igual 10^4 \n");
 	do{
@@ -67,12 +68,11 @@ int main(int argc, char *argv[]) {
 		}else{
 			ban=0;
 		}
-	}while(ban!=0);
+	}while(ban!=0);ban1=1;
 	//-----------------------------------------------------------------------------------------------------------------------
 	 }
-	 if(){
-		if(){
-			if(){
+	 if(ban1==1&&res!=0){
+			if(res==2&&res!=0){
 	//resp2-------------------------------------------------------------------------------------------------------------------
 	for(i=0;i<numero+1;i++){
 		if(cot%2==0){
@@ -81,31 +81,50 @@ int main(int argc, char *argv[]) {
 			total=total-pow((numero-cot),2);cot++;
 		}
 	}
-	printf("Resltado del valor p es %i \n",total);cot=2;
+	printf("Resltado del valor p es %i \n",total);cot=0;total=0;res=0;
 	//------------------------------------------------------------------------------------------------------------------------	
 			}
-			if(){
+			if(res==3&&res!=0){
+        if(numero>1000){
 	//resp3------------------------------------------------------------------------------------------------------------------
     aux=numero%10;
 	aux1=numero%1000;aux1/=100;  
 	aux+=aux1*10;
 	if(aux%2==0||aux%3==0||aux%5==0||aux%7==0){
-		printf("no es un numero invicto %i \n",aux);
+		printf("no es un numero invicto %i \n",aux);res=0;
 	}else{
-		printf("si es un numero invicto %i \n",aux);
+		printf("si es un numero invicto %i \n",aux);res=0;
 	}
-	//------------------------------------------------------------------------------------------------------------------------	
+	//------------------------------------------------------------------------------------------------------------------------	  	
+		}else{
+			printf("El numero no entra en el rago ingrese un numero mayor a 1000 ");res=0;
+		}
 			}
-			if(){
+			if(res==4&&res!=0){
 	//resp4-------------------------------------------------------------------------------------------------------------------
+	num=numero;
 	do{
+		aux=num;
 		do{
-			
-		}while();
-	}while();
+			aux1=aux%10;
+			total+=pow(aux1,2);
+			aux/=10;
+		}while(aux>0);
+		num=total;total=0;inter++;
+		if(num==4){
+			cot++;
+		}
+	}while(num!=1&&cot!=2);
+    if(cot==0){
+    	printf("El numero es feliz y su distancia de numeros no felices es %i \n",inter-1);cot=0;num=0;total=0;inter=0;res=0;
+	}else{
+		printf("EL numero no es feliz \n");cot=0;num=0;total=0;inter=0;res=0;
+	}
 	//------------------------------------------------------------------------------------------------------------------------		
 			}
-		}
+		
+	 }else{
+	 	printf("Primero ingrese el valor de P (1)");
 	 }	
 	}while(res!=5);
 
