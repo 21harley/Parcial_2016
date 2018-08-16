@@ -28,23 +28,20 @@ int main(int argc, char *argv[]) {
    Para algunos numeros, la cantidad de iteraciones necesarias para que la suma sea 1 puede ser mayor que para otros y a esa cantidad de iteraciones se le conoce como la “distancia de la felicidad”. 
    Por ejemplo, para el caso del numero 1 su “distancia de la felicidad” es 0 ya que 1^2 = 1.   
    No asi para el 23 cuya “distancia de la felicidad” es 3, como se muestra a continuacion: 
-   Numero      Proceso 
-    23         22 + 32   
-    13         12 + 32
-    10         12 + 02
-    
-   Suma 13 10 1 
-   Iteracion 1 2 3     
+   Numero      Proceso    Suma     Iteracion 
+    23         22 + 32     13       1
+    13         12 + 32     10       2
+    10         12 + 02      1       3   
    Distancia de la felicidad  
    Un numero se dice que es “no feliz” cuando está infinitamente lejos de llegar a la felicidad, es decir, se queda atrapado en un ciclo y su suma nunca llega a 1.
    Se puede demostrar que todo numero “no feliz” se queda atrapado en el ciclo 4, 16, 37, 58, 89, 145, 42, 20, 4, 16, 37… y asi para siempre sin llegar al 1.
    Por ejemplo, este es el caso del numero 11, el numero 20 y el numero 89 como se observa en las siguientes secuencias:   
-   12 + 12 = 22 = 42 = 12 + 62 = 32 + 72 = 52 + 82 = 82 + 92 = 12  + 42 + 52 = 42 + 22 = 22 + 02 = 42 = . . .  
-   11 2 4 16 37 58 89 145 42 20 4 16     
-   22 + 02 = 42 = 12 + 62 = 32 + 72 = 52 + 82 = 82 + 92 = 12  + 42 + 52 = 42 + 22 = 22 + 02 = 42 = . . .    
-   20 4 16 37 58 89 145 42 20 4 16   
-   82 + 92 = 12  + 42 + 52 = 42 + 22 = 22 + 02 = 42 = 12 + 62 = 32 + 72 = 52 + 82 = 82 + 92 = 12  + 42 + 52 = 42 + 22 = 22 + 02 = 42 = . . . 
-   89 145 42 20 4 16 37 58 89 145 42 20 4 16  
+   1^2 + 1^2 = 2^2  =4^2 = 1^2 + 6^2 = 3^2 + 7^2 = 5^2 + 8^2 = 8^2 + 9^2 = 1^2  + 4^2 + 5^2 = 4^2 + 2^2 = 2^2 + 0^2 = 4^2 = . . .  
+      11        2     4       16          37          58           89         145                 42          20       4     16...     
+   2^2 + 0^2 = 4^2 = 1^2 + 6^2 = 3^2 + 7^2 = 5^2 + 8^2 = 8^2 + 9^2 = 1^2  + 4^2 + 5^2 = 4^2 + 2^2 = 2^2 + 0^2 = 4^2 = . . .    
+       20      4         16         37          58          89             145               42        20        4    16...   
+   8^2 + 9^2 = 1^2  + 4^2 + 5^2 = 4^2 + 2^2 = 2^2 + 0^2 = 4^2 = 1^2 + 6^2 = 3^2 + 7^2 = 5^2 + 8^2 = 8^2 + 9^2 = 1^2  + 4^2 + 5^2 = 4^2 + 2^2 = 2^2 + 0^2 = 4^2 = . . . 
+       89            145             42          20        4        16         37          58           89          145               42           20        4   16 ... 
    Se requiere determinar cuantos numeros no felices hay entre 1 y P.  (30 ptos.) 
    ------------------------------------------------------------------------------------------------------
    5. El usuario podra realizar las operaciones que requiera, sin salir del programa.         (5 ptos.) 
