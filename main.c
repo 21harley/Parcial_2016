@@ -46,9 +46,27 @@ int main(int argc, char *argv[]) {
    ------------------------------------------------------------------------------------------------------
    5. El usuario podra realizar las operaciones que requiera, sin salir del programa.         (5 ptos.) 
    ------------------------------------------------------------------------------------------------------
+	
 	*/
-	
-	
+	//resp1
+	int i=0,numero=0,ban=0;
+	printf("Hola ingrese numero positivo menor o igual 104 \n");
+	do{
+		scanf("%i",&numero);
+		if(numero>=105 || numero<=0){
+			printf("El numero ingresado no esta en el intervalo,vuelva a ingresar un numero positivo menor o igual 104 \n");
+			ban=1;
+		}else{
+			ban=0;
+		}
+	}while(ban!=0);
+	//-------------------------------------------------------------------------------------------------------------------
+	//resp2
+	for(i=0;i<numero;i++){
+		if(i%2==0){
+			
+		}
+	}
 	
 	return 0;
 }
