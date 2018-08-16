@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include<math.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
 	
 	/*
-	1. Solicitar al usuario un numero entero positivo P menor o igual que 104. 
+	1. Solicitar al usuario un numero entero positivo P menor o igual que 10^4. 
 	Si el numero ingresado no es correcto mostrar un mensaje de error y solicitar nuevamente el numero, 
 	hasta que el usuario introduzca un numero valido.                    (5 ptos.)
 	------------------------------------------------------------------------------------------------------------
 	2. Con el valor P dado por el usuario en el paso anterior, calcular la suma de:  
-    P2 – (P–1)2 + (P–2)2 – (P–3)2 + (P–4)2 – (P–5)2 +… – (P – n-1)2 + (P – n) 2 
+    P^2 – (P–1)^2 + (P–2)^2 – (P–3)^2 + (P–4)^2 – (P–5)^2 +… – (P – n-1)^2 + (P – n)^2 
     El ultimo termino de la suma es igual a 1 o -1       
     Por ejemplo, si el valor de P es igual a 5 se obtiene: 
     25 – 16 + 9 – 4 + 1 = 15 
@@ -26,10 +26,13 @@ int main(int argc, char *argv[]) {
 	---------------------------------------------------------------------------------------------------------------
 	4. Un numero es “feliz” si al sumar el cuadrado de cada uno de los digitos que lo conforma y repetir este proceso un numero finito de veces la suma converge a 1.
    Para algunos numeros, la cantidad de iteraciones necesarias para que la suma sea 1 puede ser mayor que para otros y a esa cantidad de iteraciones se le conoce como la “distancia de la felicidad”. 
-   Por ejemplo, para el caso del numero 1 su “distancia de la felicidad” es 0 ya que 12 = 1.   
+   Por ejemplo, para el caso del numero 1 su “distancia de la felicidad” es 0 ya que 1^2 = 1.   
    No asi para el 23 cuya “distancia de la felicidad” es 3, como se muestra a continuacion: 
-   Numero 23 13 10 
-   Proceso 22 + 32  12 + 32 12 + 02 
+   Numero      Proceso 
+    23         22 + 32   
+    13         12 + 32
+    10         12 + 02
+    
    Suma 13 10 1 
    Iteracion 1 2 3     
    Distancia de la felicidad  
@@ -50,10 +53,10 @@ int main(int argc, char *argv[]) {
 	*/
 	//resp1
 	int i=0,numero=0,ban=0;
-	printf("Hola ingrese numero positivo menor o igual 104 \n");
+	printf("Hola ingrese numero positivo menor o igual 10^4 \n");
 	do{
 		scanf("%i",&numero);
-		if(numero>=105 || numero<=0){
+		if(numero>=10000 || numero<=0){
 			printf("El numero ingresado no esta en el intervalo,vuelva a ingresar un numero positivo menor o igual 104 \n");
 			ban=1;
 		}else{
@@ -61,12 +64,29 @@ int main(int argc, char *argv[]) {
 		}
 	}while(ban!=0);
 	//-------------------------------------------------------------------------------------------------------------------
-	//resp2
-	for(i=0;i<numero;i++){
-		if(i%2==0){
-			
+	//resp2 
+	int total=0,cot=0;
+	for(i=0;i<numero+1;i++){
+		if(cot%2==0){
+			total=total+pow((numero-cot),2);cot++;
+		}else{
+			total=total-pow((numero-cot),2);cot++;
 		}
 	}
+	printf("Resltado del valor p es %i \n",total);cot=2;
+	//----------------------------------------------------------------------------------------------------------------------
+	//resp3
+    int aux=0,aux1=10;
+    aux=numero%10;
+	aux1=numero%1000;aux1/=100;  
+	aux+=aux1*10;
+	if(aux%2==0||aux%3==0||aux%5==0||aux%7==0){
+		printf("no es un numero invicto %i \n",aux);
+	}else{
+		printf("si es un numero invicto %i \n",aux);
+	}
+	//------------------------------------------------------------------------------------------------------------------------
+	//resp4
 	
 	return 0;
 }
