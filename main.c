@@ -29,9 +29,9 @@ int main(int argc, char *argv[]) {
    Por ejemplo, para el caso del numero 1 su “distancia de la felicidad” es 0 ya que 1^2 = 1.   
    No asi para el 23 cuya “distancia de la felicidad” es 3, como se muestra a continuacion: 
    Numero      Proceso    Suma     Iteracion 
-    23         2^2 + 32     13       1
-    13         1^2 + 32     10       2
-    10         1^2 + 02      1       3   
+    23         2^2 + 3^2     13       1
+    13         1^2 + 3^2     10       2
+    10         1^2 + 0^2      1       3   
    Distancia de la felicidad  
    Un numero se dice que es “no feliz” cuando está infinitamente lejos de llegar a la felicidad, es decir, se queda atrapado en un ciclo y su suma nunca llega a 1.
    Se puede demostrar que todo numero “no feliz” se queda atrapado en el ciclo 4, 16, 37, 58, 89, 145, 42, 20, 4, 16, 37… y asi para siempre sin llegar al 1.
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 	   printf("1)Ingrese  P  menor o igual que 10^4. \n");
 	   printf("2)valor de P (P-n-1)^2 + (P-n)^2 \n");
 	   printf("3)Determinar si el numero P es un numero invicto. \n");
-	   printf("4)¿El numero es Feliz? \n");
+	   printf("4)El numero es Feliz? \n");
 	   printf("5)salir \n");
 	   scanf("%i",&res);
 	 if(res==1&&res!=0){
