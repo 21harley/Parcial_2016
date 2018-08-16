@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
 			}
 		
 	 }else{
-	 	printf("Primero ingrese el valor de P (1)");
+	 	printf("Primero ingrese el valor de P (1) \n");
 	 }	
 	}while(res!=5);
 
